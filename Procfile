@@ -1,0 +1,1 @@
+web gunicorn uwezoachievers.wsgi:application --log-file -
