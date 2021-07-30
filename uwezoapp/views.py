@@ -1,7 +1,9 @@
 from django.contrib.admin.sites import AlreadyRegistered
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -18,13 +20,12 @@ def register(request):
              elif User.objects.filter(username=username).exists():
                 messages.info(request, 'Username Already Used')
                 return redirect('register')
-             elif "@gmail.com" or ".edu" not in email:
-                messages.info(request, "Invalid Email Adress")
-                return redirect('register')
              else:
                 user = User.objects.create_user(username=username, email=email, password=password)
                 user.save();
                 return redirect('login')
+        elif "@gmail.com" or ".edu" or ".org" not in email:
+            messages.info(request, "Invalid Email Address")
         else:
             messages.info(request, 'Password Not the Same')
             return redirect('register')
