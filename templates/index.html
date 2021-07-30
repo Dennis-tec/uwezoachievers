@@ -120,6 +120,19 @@ right: 0;
 display: inline-block;
 justify-content: space-between;
 }
+@media screen and (max-width: 768px){
+  .nav__menu{
+    position: fixed;
+    top: var(--header-height);
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--second-color);
+    transition: .5s;
+    right: -100%;
+
+  }
+}
 
     </style>
      <!--===== HEAD =====-->
