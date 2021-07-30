@@ -254,7 +254,7 @@ color: white;
 .intro{
     height: 500px;
     padding-top: 70px;
-    background-image: url('img/background.jpg');
+    background-image: url("img/background.eee14bd0d1ff.jpg");
     background-attachment: fixed;
 }
 #loginbtn, #logoutbtn, #registerbtn{
