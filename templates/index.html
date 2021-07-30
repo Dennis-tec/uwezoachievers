@@ -122,6 +122,7 @@ justify-content: space-between;
 }
 @media screen and (max-width: 768px){
   .nav__menu{
+    right: -100%;
     position: fixed;
     top: var(--header-height);
     width: 80%;
@@ -129,9 +130,39 @@ justify-content: space-between;
     padding: 2rem;
     background-color: var(--second-color);
     transition: .5s;
-    right: -100%;
-
   }
+  .side_menu{
+            display: none;
+            font-size: 15px;
+            font-weight: lighter;
+            position: absolute;
+            background-color:transparent;
+
+        }
+        .side_menu li:hover{
+            background-color: skyblue;
+        }
+        #programs:hover .side_menu{
+            display: block;
+        }
+        #programs:hover .side_menu ul{
+            display: block;
+            margin: 10px;
+        }
+        #programs:hover .side_menu ul li{
+            width: 150px;
+            padding: 10px;
+            border-radius: 0;
+            text-align: left;
+            background-color: transparent;
+            border-bottom: 1px dotted #fff;
+
+        }
+}
+.menu_bar{
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
     </style>
