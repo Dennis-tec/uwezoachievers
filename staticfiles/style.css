@@ -1,0 +1,25 @@
+/* ===Login details=== */
+.login_header{
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: 6%;
+}
+.login_details{
+    text-align: center;
+}
+#login_password, #login_btn{
+    margin-top: 10%;
+}
+
+/*===register details===*/
+.register_head{
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: 6%;
+}
+.register_details{
+    text-align: center;
+}
+#register_pas, #register_pa1, #register_email, #register_btn{
+margin-top: 10%;
+}
