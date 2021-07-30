@@ -111,7 +111,7 @@ ul a{
     text-decoration: none;
 }
 @media screen and (max-width: 768px){
-  .nav__menu{
+  .nav__list{
     position: fixed;
     top: var(--header-height);
     width: 80%;

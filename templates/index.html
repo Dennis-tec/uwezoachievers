@@ -24,27 +24,18 @@
             font-size: 15px;
             font-weight: lighter;
             position: absolute;
-            background-color:transparent;
+            background-color: #02092c;
+
 
         }
         .side_menu li:hover{
-            background-color: skyblue;
+            background-color: rgb(4, 69, 95);
         }
         #programs:hover .side_menu{
             display: block;
         }
         #programs:hover .side_menu ul{
             display: block;
-            margin: 10px;
-        }
-        #programs:hover .side_menu ul li{
-            width: 150px;
-            padding: 10px;
-            border-radius: 0;
-            text-align: left;
-            background-color: transparent;
-            border-bottom: 1px dotted #fff;
-
         }
 .logo{
     color: white;
@@ -81,7 +72,7 @@ color: white;
   }
 }
 .intro{
-    padding-top: 70px;
+    padding-top: 65px;
     background-image: url("{% static 'img/background.jpg' %}");
     background-attachment: fixed;
     background-position: center;
@@ -95,20 +86,20 @@ color: white;
     color: #fff;
     padding: .25rem 1.0rem;
     border-radius: .8rem;
-    animation: size 3s infinite;
+    animation: size 5s infinite;
 }
 @keyframes size{
     0%{
-        padding: .30rem 1.0rem;
+        padding: .28rem 0.95rem;
 
     }
     30%{
-        padding: .20rem 1.0rem;
+        padding: .22rem 1.05rem;
 
     }
 }
 #loginbtn:hover, #logoutbtn:hover, #registerbtn:hover{
-    padding: .27rem 1.1rem;
+    padding: .27rem 1.rem;
 
 }
 .login-register, #logoutbtn{
@@ -121,7 +112,7 @@ display: inline-block;
 justify-content: space-between;
 }
 @media screen and (max-width: 768px){
-  .nav__menu{
+.nav_menu{
     right: -100%;
     position: fixed;
     top: var(--header-height);
@@ -132,33 +123,49 @@ justify-content: space-between;
     transition: .5s;
   }
   .side_menu{
-            display: none;
-            font-size: 15px;
-            font-weight: lighter;
-            position: absolute;
-            background-color:transparent;
+        display: none;
+        font-size: 15px;
+        font-weight: lighter;
+        position: absolute;
+        background-color: #02092c;
 
-        }
-        .side_menu li:hover{
-            background-color: skyblue;
-        }
-        #programs:hover .side_menu{
-            display: block;
-        }
-        #programs:hover .side_menu ul{
-            display: block;
-            margin: 10px;
-        }
-        #programs:hover .side_menu ul li{
-            width: 150px;
-            padding: 10px;
-            border-radius: 0;
-            text-align: left;
-            background-color: transparent;
-            border-bottom: 1px dotted #fff;
-
-        }
+ }
+ .side_menu li:hover{
+    background-color: rgb(4, 69, 95);
 }
+#programs:hover .side_menu{
+            display: block;
+}
+#programs:hover .side_menu ul{
+ display: block;
+}
+
+#loginbtn, #logoutbtn, #registerbtn{
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: var(--first-color);
+    color: #fff;
+    padding: .15rem 0.5rem;
+    border-radius: .8rem;
+    animation: phsize 5s infinite;
+    padding-top: 50px;
+}
+@keyframes phsize {
+    0%{
+        padding: .18rem 0.55rem;
+
+    }
+    30%{
+        padding: .12rem 0.45rem;
+
+    }
+}
+.intro{
+    padding-top: 50px;
+}
+}
+
 .menu_bar{
   color: white;
   font-size: 1.5rem;
@@ -223,5 +230,32 @@ justify-content: space-between;
       </div>
       <p>&#169; 2021 Uwezo Achievers. All Rights Reserved.</p>
 </footer>
+<script>
+    /*===== MENU SHOW =====*/
+const showMenu = (toggleId, navId) =>{
+    const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId)
+
+    if(toggle && nav){
+        toggle.addEventListener('click', ()=>{
+            nav.classList.toggle('show')
+        })
+    }
+}
+showMenu('menu_bar','nav_menu')
+
+/*===== ACTIVE AND REMOVE MENU =====*/
+const navLink = document.querySelectorAll('.nav__link');
+
+function linkAction(){
+  /*Active link*/
+  navLink.forEach(n => n.classList.remove('active'));
+  this.classList.add('active');
+
+  /*Remove menu mobile*/
+  const navMenu = document.getElementById('nav_menu')
+  navMenu.classList.remove('show')
+}
+</script>
 </body>
 </html>
