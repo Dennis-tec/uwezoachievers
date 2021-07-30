@@ -91,7 +91,7 @@ img{
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #24252A;
+  background-color: #02092c;
   box-shadow: 0 1px 4px rgba(146,161,176,.15);
   color: white;
 }
@@ -114,12 +114,13 @@ ul a{
   .nav__menu{
     position: fixed;
     top: var(--header-height);
-    right: -100%;
     width: 80%;
     height: 100%;
     padding: 2rem;
     background-color: var(--second-color);
     transition: .5s;
+    right: -100%;
+
   }
 }
 .nav__item{
@@ -149,8 +150,25 @@ ul a{
     font-size: 24px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
-    background-color: indigo;
+    background-color: rgb(3, 46, 63);
     color: white;
+    animation: transition 3s changecolor;
+}
+@keyframes changecolor {
+  0%{
+background-color: indigo;
+color: white;
+  }
+  30%{
+    color: maroon;
+    background-color: teal;
+  }
+  60%{
+    color: green;
+  }
+  90%{
+   background-color: hsla(hue, saturation, lightness, alpha); 
+  }
 }
 .menu_bar{
   color: var(--second-color);
@@ -204,7 +222,10 @@ ul a{
   .nav_menu ul li a{
       color: white;
   }
-
+.side_menu{
+  font-size: 15px;
+  display: block;
+}
   .nav{
     height: calc(var(--header-height) + 1rem);
   }
@@ -243,7 +264,7 @@ ul a{
     background-color: var(--first-color);
     color: #fff;
     padding: .45rem 1.5rem;
-    border-radius: .5rem;
+    border-radius: .2rem;
 }
 .login-register, #logoutbtn{
 position: fixed;
