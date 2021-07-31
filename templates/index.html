@@ -81,6 +81,13 @@ color: white;
     background-size: contain;
     
 }
+.home{
+  height: 200px; 
+}
+.home p{
+    padding-top: 35px;
+    font-size: 15px;
+}
 .intro{
 
 }
@@ -179,7 +186,14 @@ justify-content: space-between;
 .intro{
     padding-top: 2px;
     height: 300px;
-    opacity: 0.9rem;
+}
+.home{
+    height: 200px;
+}
+.home p{
+    padding-top: 10px;
+    font-weight: lighter;
+    font-size: 12px;
 }
 }
 
@@ -188,36 +202,20 @@ justify-content: space-between;
   font-size: 1.5rem;
   cursor: pointer;
 }
+.home{
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-weight: lighter;
+    background-color: rgba(9, 40, 107, 0.932);
+    background-position: center;
+    margin-top: 40px;
+}
+.footer{
+    background-color: rgba(1, 29, 88, 0.932);
+}
 
     </style>
-<script>
-/*===== MENU SHOW =====*/
-const myMenu = (toggleId, navId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
-
-    if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
-    }
-}
-myMenu('menu_bar','nav_menu')
-
-/*===== ACTIVE AND REMOVE MENU =====*/
-const myLink = document.querySelectorAll('.nav__link');
-
-function linkAction(){
-  /*Active link*/
-  myLink.forEach(n => n.classList.remove('active'));
-  this.classList.add('active');
-
-  /*Remove menu mobile*/
-  const myMenu = document.getElementById('nav_menu')
-  myMenu.classList.remove('show')
-}
-
-</script>
      <!--===== HEAD =====-->
      <header class="head">
         <nav class="nav grid">
@@ -261,7 +259,13 @@ function linkAction(){
     </ul>
 
     {% endif%}
+    <div class="home">
+<p>Uwezo Achievers provides access to high school and undergraduate  <br> education’s scholarships for potential, needy Kenyan graduates <br> who would otherwise have no chance to continue with their studies. <br> “Education is the most powerful weapon that we can <br> use to change the world”, Nelson Mandela. 
+</p>
+    </div>
+<div class="subscribe">
 
+</div>
     </main>
  <!--===== FOOTER =====-->
  <footer class="footer">
