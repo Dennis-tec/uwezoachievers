@@ -19,6 +19,9 @@
             background-color: #02092c;
 
         }
+        .intro{
+            height: 400px;
+        }
         .side_menu{
             display: none;
             font-size: 15px;
@@ -74,9 +77,12 @@ color: white;
 .intro{
     padding-top: 65px;
     background-image: url("{% static 'img/background.jpg' %}");
-    background-attachment: fixed;
     background-position: center;
     background-size: contain;
+    
+}
+.intro{
+
 }
 #loginbtn, #logoutbtn, #registerbtn{
     color: white;
@@ -147,7 +153,7 @@ justify-content: space-between;
     background-color: var(--first-color);
     color: #fff;
     padding: .15rem 0.5rem;
-    border-radius: .3rem;
+    border-radius: .4rem;
     animation: phsize 5s infinite;
 }
 @keyframes phsize {
@@ -161,7 +167,9 @@ justify-content: space-between;
     }
 }
 .intro{
-    padding-top: 30px;
+    padding-top: 2px;
+    height: 300px;
+    opacity: 0.9rem;
 }
 }
 
@@ -172,6 +180,34 @@ justify-content: space-between;
 }
 
     </style>
+<script>
+/*===== MENU SHOW =====*/
+const myMenu = (toggleId, navId) =>{
+    const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId)
+
+    if(toggle && nav){
+        toggle.addEventListener('click', ()=>{
+            nav.classList.toggle('show')
+        })
+    }
+}
+myMenu('menu_bar','nav_menu')
+
+/*===== ACTIVE AND REMOVE MENU =====*/
+const myLink = document.querySelectorAll('.nav__link');
+
+function linkAction(){
+  /*Active link*/
+  myLink.forEach(n => n.classList.remove('active'));
+  this.classList.add('active');
+
+  /*Remove menu mobile*/
+  const myMenu = document.getElementById('nav_menu')
+  myMenu.classList.remove('show')
+}
+
+</script>
      <!--===== HEAD =====-->
      <header class="head">
         <nav class="nav grid">
@@ -191,9 +227,9 @@ justify-content: space-between;
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item" id="programs"><a href="#skills" class="nav__link">Programs</a>
                     <ul class="side_menu">
-                        <li ><a href="#skills" >High school</a></li>
-                        <li ><a href="#skills" >Kenya ndergrade</a></li>
-                        <li ><a href="#skills" >Undergrade abroad</a></li>
+                        <li ><a href="#skills" >High School</a></li>
+                        <li ><a href="#skills" >Kenya Undergrade</a></li>
+                        <li ><a href="#skills" >Abroad Undergrade</a></li>
                     </ul> </li>
                     <li class="nav__item"><a href="#skills" class="nav__link">News</a></li>
                 </ul>
@@ -229,32 +265,5 @@ justify-content: space-between;
       </div>
       <p>&#169; 2021 Uwezo Achievers. All Rights Reserved.</p>
 </footer>
-<script>
-    /*===== MENU SHOW =====*/
-const showMenu = (toggleId, navId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
-
-    if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
-    }
-}
-showMenu('menu_bar','nav_menu')
-
-/*===== ACTIVE AND REMOVE MENU =====*/
-const navLink = document.querySelectorAll('.nav__link');
-
-function linkAction(){
-  /*Active link*/
-  navLink.forEach(n => n.classList.remove('active'));
-  this.classList.add('active');
-
-  /*Remove menu mobile*/
-  const navMenu = document.getElementById('nav_menu')
-  navMenu.classList.remove('show')
-}
-</script>
 </body>
 </html>
