@@ -85,14 +85,14 @@ color: white;
 
 }
 #loginbtn, #logoutbtn, #registerbtn{
-    color: white;
     font-size: 17px;
     font-weight: bold;
-    background-color: var(--first-color);
+    background-color: transparent;
     color: #fff;
     padding: .25rem 1.0rem;
-    border-radius: .3rem;
+    border-radius: 25px;
     animation: size 5s infinite;
+    border-color: white;
 }
 @keyframes size{
     0%{
@@ -105,7 +105,9 @@ color: white;
     }
 }
 #loginbtn:hover, #logoutbtn:hover, #registerbtn:hover{
-    padding: .27rem 1.rem;
+    padding: .27rem 1.0rem;
+    background-color: white;
+    color: black;
 
 }
 .login-register, #logoutbtn{
@@ -148,21 +150,29 @@ justify-content: space-between;
 
 #loginbtn, #logoutbtn, #registerbtn{
     color: white;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
-    background-color: var(--first-color);
+    background-color: transparent;
     color: #fff;
-    padding: .15rem 0.5rem;
-    border-radius: .4rem;
+    padding: .18rem 0.7rem;
+    border-radius: 25px;
     animation: phsize 5s infinite;
+    border-color: white;
+    
+
+}
+#loginbtn:hover, #logoutbtn:hover, #registerbtn:hover{
+    padding: .20rem 0.8rem;
+    background-color: white;
+    color: black;
 }
 @keyframes phsize {
     0%{
-        padding: .18rem 0.55rem;
+        padding: .19rem 0.73rem;
 
     }
     30%{
-        padding: .12rem 0.45rem;
+        padding: .17rem 0.67rem;
 
     }
 }
