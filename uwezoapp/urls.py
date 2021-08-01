@@ -11,6 +11,7 @@ urlpatterns = [
     path('goal', views.goal, name = 'goal'),
     path('high', views.high, name = 'high'),
     path('kenyan', views.kenyan, name = 'kenyan'),
-    path('abroad', views.abroad, name = 'abroad')
+    path('abroad', views.abroad, name = 'abroad'),
+    path('news', views.news, name = 'abroad')
 
 ]

@@ -50,7 +50,7 @@ def logout(request):
     auth.logout(request)
     return redirect('/')
 def whatwedo(request):
-    return redirect('whatwedo.html')
+    return render(request, 'whatwedo.html')
 def goal(request):
     return render(request, 'goal.html')
 def high(request):
@@ -59,3 +59,5 @@ def kenyan(request):
     return render(request, 'kenyan.html')
 def abroad(request):
     return render(request, 'abroad.html')
+def news(request):
+    return render(request, "news.html")

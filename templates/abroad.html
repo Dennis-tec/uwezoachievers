@@ -1,0 +1,376 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="{% static 'scripts.js' %}"></script>
+    <link href=" https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel= "stylesheet">
+    <script src=" https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <title>Uwezo Achievers</title>
+</head>
+<body>
+    <style>
+        .head{
+            background-color: #02092c;
+
+        }
+        .intro{
+            height: 400px;
+        }
+        .side_menu{
+            display: none;
+            font-size: 15px;
+            font-weight: lighter;
+            position: absolute;
+            background-color: #02092c;
+
+
+        }
+        
+        .side_menu li:hover{
+            background-color: rgb(4, 69, 95);
+        }
+        #programs:hover .side_menu{
+            display: block;
+        }
+        #programs:hover .side_menu ul{
+            display: block;
+        }
+        .goal{
+            display: none;
+            font-size: 15px;
+            font-weight: lighter;
+            position: absolute;
+            background-color: #02092c;
+
+
+        }
+        .goal li:hover{
+            background-color: rgb(4, 69, 95);
+        }
+        #about:hover .goal{
+            display: block;
+        }
+        #about:hover .goal ul{
+            display: block;
+        }   
+.logo{
+    color: white;
+}
+#logo{
+    border-radius: 0.7rem;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(3, 46, 63);
+    color: white;
+    animation: changecolor 5s infinite;
+}
+@keyframes changecolor {
+  0%{
+background-color: indigo;
+color: white;
+  }
+  30%{
+    color: maroon;
+    background-color: teal;
+  }
+  60%{
+    color: green;
+  }
+  90%{
+   background-color: hsla(hue, saturation, lightness, alpha); 
+  }
+}
+ @media screen and (min-width: 1024px){
+  .grid{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.intro{
+    padding-top: 65px;
+    background-image: url("{% static 'img/background.jpg' %}");
+    background-position: center;
+    background-size: contain;
+    
+}
+.home{
+  height: 200px; 
+}
+.home p{
+    padding-top: 35px;
+    font-size: 15px;
+}
+
+#loginbtn, #logoutbtn, #registerbtn{
+    font-size: 17px;
+    font-weight: bold;
+    background-color: transparent;
+    color: #fff;
+    padding: .25rem 1.0rem;
+    border-radius: 25px;
+    animation: size 5s infinite;
+    border-color: white;
+}
+@keyframes size{
+    0%{
+        padding: .28rem 0.95rem;
+
+    }
+    30%{
+        padding: .22rem 1.05rem;
+
+    }
+}
+#loginbtn:hover, #logoutbtn:hover, #registerbtn:hover{
+    padding: .27rem 1.0rem;
+    background-color: white;
+    color: black;
+
+}
+.login-register, #logoutbtn{
+position: fixed;
+right: 0;
+
+}
+.login-register li{
+display: inline-block;
+justify-content: space-between;
+}
+@media screen and (max-width: 768px){
+.nav_menu{
+    right: -100%;
+    position: fixed;
+    top: var(--header-height);
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--second-color);
+    transition: .5s;
+  }
+  .side_menu{
+        display: none;
+        font-size: 15px;
+        font-weight: lighter;
+        position: absolute;
+        background-color: #02092c;
+
+ }
+ .side_menu li:hover{
+    background-color: rgb(4, 69, 95);
+}
+#programs:hover .side_menu{
+            display: block;
+}
+#programs:hover .side_menu ul{
+ display: block;
+}
+
+#loginbtn, #logoutbtn, #registerbtn{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;
+    color: #fff;
+    padding: .18rem 0.7rem;
+    border-radius: 25px;
+    animation: phsize 5s infinite;
+    border-color: white;
+    
+
+}
+#loginbtn:hover, #logoutbtn:hover, #registerbtn:hover{
+    padding: .20rem 0.8rem;
+    background-color: white;
+    color: black;
+}
+@keyframes phsize {
+    0%{
+        padding: .19rem 0.73rem;
+
+    }
+    30%{
+        padding: .17rem 0.67rem;
+
+    }
+}
+.intro{
+    padding-top: 2px;
+    height: 300px;
+}
+.home{
+    height: 200px;
+}
+.home p{
+    padding-top: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+}
+}
+
+.menu_bar{
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.home{
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-weight: lighter;
+    background-color: rgba(9, 40, 107, 0.932);
+    background-position: center;
+    margin-top: 40px;
+}
+.footer{
+    background-color: rgba(1, 29, 88, 0.932);
+}
+
+    </style>
+     <!--===== HEAD =====-->
+     {% if user.is_authenticated %}
+     <header class="head">
+        <nav class="nav grid">
+                <div class="top-name">                   
+                {% if user.is_authenticated %}
+                <h5>{{user.username}} <input type="button" id = 'logo' value="UA"> </h5> 
+                {% else %}    
+                <input type="button" id = 'logo' value="UA">
+             {% endif %}
+                </div>
+
+                <div class="logo"><h3>Uwezo Achievers</h3></div>
+
+            <div class="nav_menu" id = "nav_menu">
+                <ul class="nav__list" id="nav_list">
+                    <li class="nav__item"><a href="index" class="nav__link active">Home</a></li>
+                    <li class="nav__item" id ="about" ><a href="" class="nav__link">About</a>
+                    <ul class="goal">
+                    <li><a href="whatwedo">What We do</a></li>
+                    <li><a href="goal">Our Goal</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav__item" id="programs"><a href="#skills" class="nav__link">Programs</a>
+                    <ul class="side_menu">
+                        <li ><a href="high" >High School</a></li>
+                        <li ><a href="kenyan">Kenya Undergrade</a></li>
+                        <li ><a href="abroad">Abroad Undergrade</a></li>
+                    </ul> </li>
+                    <li class="nav__item"><a href="news" class="nav__link">News</a></li>
+                </ul>
+            </div>
+            <div class="menu_bar" id="menu_bar">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="intro">
+    {% if user.is_authenticated %}
+    <a href="logout" class="logoutbtn"> <input type="button" id = "logoutbtn" value="Logout"> </a>
+    {% else %}
+    <ul class="login-register">
+        <li><a href="login" class="loginbtn"> <input type="button" id="loginbtn" value="Login"> </a></li>
+        <li><a href="register" class="registerbtn"> <input type="button" id="registerbtn" value="Sign Up"> </a>
+        </li>
+    </ul>
+
+    {% endif%}
+    <div class="home">
+<p>Uwezo Achievers provides access to high school and undergraduate  <br> education’s scholarships for potential, needy Kenyan graduates <br> who would otherwise have no chance to continue with their studies. <br> “Education is the most powerful weapon that we can <br> use to change the world”, Nelson Mandela. 
+</p>
+    </div>
+<div class="subscribe">
+
+</div>
+    </main>
+ <!--===== FOOTER =====-->
+ <footer class="footer">
+    <p class="footer__title">Uwezo <br> Achievers</p>
+    <div class="number"><h5>Get In Touch</h5> </div>
+      <div class="footer__social">
+          <a href="https://www.linkedin.com/in/dennis-yiaile-3ab6851a7" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+          <a href="https://www.facebook.com/denno.kamakx" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+          <a href="https://www.instagram.com/yiaile_kamakei/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+          <a href="https://twitter.com/YKamakei?s=08" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+      </div>
+      <p>&#169; 2021 Uwezo Achievers. All Rights Reserved.</p>
+</footer>
+
+     <!--===== HEAD =====-->
+     {% else %}
+     <header class="head">
+        <nav class="nav grid">
+                <div class="top-name">                   
+                {% if user.is_authenticated %}
+                <h5>{{user.username}} <input type="button" id = 'logo' value="UA"> </h5> 
+                {% else %}    
+                <input type="button" id = 'logo' value="UA">
+             {% endif %}
+                </div>
+
+                <div class="logo"><h3>Uwezo Achievers</h3></div>
+
+            <div class="nav_menu" id = "nav_menu">
+                <ul class="nav__list" id="nav_list">
+                    <li class="nav__item"><a href="index" class="nav__link active">Home</a></li>
+                    <li class="nav__item" id ="about" ><a href="" class="nav__link">About</a>
+                    <ul class="goal">
+                    <li><a href="whatwedo">What We do</a></li>
+                    <li><a href="goal">Our Goal</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav__item" id="programs"><a href="#skills" class="nav__link">Programs</a>
+                    <ul class="side_menu">
+                        <li ><a href="high" >High School</a></li>
+                        <li ><a href="kenyan" >Kenya Undergrade</a></li>
+                        <li ><a href="abroad" >Abroad Undergrade</a></li>
+                    </ul> </li>
+                    <li class="nav__item"><a href="news" class="nav__link">News</a></li>
+                </ul>
+            </div>
+            <div class="menu_bar" id="menu_bar">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="intro">
+    {% if user.is_authenticated %}
+    <a href="logout" class="logoutbtn"> <input type="button" id = "logoutbtn" value="Logout"> </a>
+    {% else %}
+    <ul class="login-register">
+        <li><a href="login" class="loginbtn"> <input type="button" id="loginbtn" value="Login"> </a></li>
+        <li><a href="register" class="registerbtn"> <input type="button" id="registerbtn" value="Sign Up"> </a>
+        </li>
+    </ul>
+
+    {% endif%}
+    <div class="home">
+<p>Please Login In to continue</p>
+    </div>
+<div class="subscribe">
+
+</div>
+    </main>
+ <!--===== FOOTER =====-->
+ <footer class="footer">
+    <p class="footer__title">Uwezo <br> Achievers</p>
+    <div class="number"><h5>Get In Touch</h5> </div>
+      <div class="footer__social">
+          <a href="https://www.linkedin.com/in/dennis-yiaile-3ab6851a7" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+          <a href="https://www.facebook.com/denno.kamakx" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+          <a href="https://www.instagram.com/yiaile_kamakei/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+          <a href="https://twitter.com/YKamakei?s=08" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+      </div>
+      <p>&#169; 2021 Uwezo Achievers. All Rights Reserved.</p>
+</footer>
+{% endif %}
+</body>
+</html>
