@@ -253,7 +253,7 @@ color: white;
 }
 .intro{
     padding-top: 65px;
-    background-image: url('img/background.jpg');
+    background-image: url("img/background.eee14bd0d1ff.jpg");
     background-attachment: fixed;
 }
 #loginbtn, #logoutbtn, #registerbtn{
