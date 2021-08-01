@@ -6,5 +6,11 @@ urlpatterns = [
     path('', views.index, name = 'index'),
     path('login', views.login, name = 'login'),
     path('register', views.register, name ='register'),
-    path('logout', views.logout, name = 'logout')
+    path('logout', views.logout, name = 'logout'),
+    path('whatwedo', views.whatwedo, name = 'whatwedo'),
+    path('goal', views.goal, name = 'goal'),
+    path('high', views.high, name = 'high'),
+    path('kenyan', views.kenyan, name = 'kenyan'),
+    path('abroad', views.abroad, name = 'abroad')
+
 ]

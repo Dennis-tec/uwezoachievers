@@ -49,3 +49,13 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+def whatwedo(request):
+    return redirect('whatwedo.html')
+def goal(request):
+    return render(request, 'goal.html')
+def high(request):
+    return render(request, 'high.html')
+def kenyan(request):
+    return render(request, 'kenyan.html')
+def abroad(request):
+    return render(request, 'abroad.html')

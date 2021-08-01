@@ -31,6 +31,7 @@
 
 
         }
+        
         .side_menu li:hover{
             background-color: rgb(4, 69, 95);
         }
@@ -40,6 +41,24 @@
         #programs:hover .side_menu ul{
             display: block;
         }
+        .goal{
+            display: none;
+            font-size: 15px;
+            font-weight: lighter;
+            position: absolute;
+            background-color: #02092c;
+
+
+        }
+        .goal li:hover{
+            background-color: rgb(4, 69, 95);
+        }
+        #about:hover .goal{
+            display: block;
+        }
+        #about:hover .goal ul{
+            display: block;
+        }   
 .logo{
     color: white;
 }
@@ -88,9 +107,7 @@ color: white;
     padding-top: 35px;
     font-size: 15px;
 }
-.intro{
 
-}
 #loginbtn, #logoutbtn, #registerbtn{
     font-size: 17px;
     font-weight: bold;
@@ -232,12 +249,17 @@ justify-content: space-between;
             <div class="nav_menu" id = "nav_menu">
                 <ul class="nav__list" id="nav_list">
                     <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item" id ="about" ><a href="#about" class="nav__link">About</a>
+                    <ul class="goal">
+                    <li><a href="whatwedo">What We do</a></li>
+                    <li><a href="goal">Our Goal</a></li>
+                    </ul>
+                    </li>
                     <li class="nav__item" id="programs"><a href="#skills" class="nav__link">Programs</a>
                     <ul class="side_menu">
-                        <li ><a href="#skills" >High School</a></li>
-                        <li ><a href="#skills" >Kenya Undergrade</a></li>
-                        <li ><a href="#skills" >Abroad Undergrade</a></li>
+                        <li ><a href="high" >High School</a></li>
+                        <li ><a href="kenyan" >Kenya Undergrade</a></li>
+                        <li ><a href="abroad" >Abroad Undergrade</a></li>
                     </ul> </li>
                     <li class="nav__item"><a href="#skills" class="nav__link">News</a></li>
                 </ul>
