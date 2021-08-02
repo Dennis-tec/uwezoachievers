@@ -26,8 +26,12 @@
             font-weight: lighter;
             position: absolute;
             background-color: #02092c;
+            justify-content: space-between;
 
 
+        }
+        ul a{
+            text-decoration: none;
         }
         
         .side_menu li:hover{
@@ -45,6 +49,7 @@
             font-weight: lighter;
             position: absolute;
             background-color: #02092c;
+            justify-content: space-between;
 
 
         }
@@ -151,23 +156,58 @@ justify-content: space-between;
     padding: 2rem;
     background-color: var(--second-color);
     transition: .5s;
+    color: white;
   }
   .side_menu{
-        display: none;
         font-size: 15px;
         font-weight: lighter;
-        position: absolute;
-        background-color: #02092c;
-
+        background-color: transparent;
+        position: relative;
+        color: white;
+        left: 7%;
  }
+ .goals, .whatwedo, #kenyan, #abroad, #high{
+     color: white;
+     font-size: 14px;
+     font-weight: lighter;
+ }
+.side_menu ul{
+    list-style: none;
+}
+li a {
+     text-decoration: none;
+ }
+.side_menu ul li a{
+    text-decoration: none;
+    color: white;
+    justify-content: space-between;
+}
  .side_menu li:hover{
     background-color: rgb(4, 69, 95);
+    text-decoration: none;
 }
 #programs:hover .side_menu{
-            display: block;
+    display: block;
 }
 #programs:hover .side_menu ul{
- display: block;
+    display: block;
+}
+.goal{
+        font-size: 15px;
+        font-weight: lighter;
+        background-color: transparent;
+        position: relative;
+        left: 7%;
+
+ }
+ .goal li:hover{
+    background-color: rgb(4, 69, 95);
+}
+#about:hover .goal{
+            display: block;
+}
+#about:hover .goal ul{
+    display: block;
 }
 
 #loginbtn, #logoutbtn, #registerbtn{
@@ -262,17 +302,17 @@ justify-content: space-between;
             <div class="nav_menu" id = "nav_menu">
                 <ul class="nav__list" id="nav_list">
                     <li class="nav__item"><a href="/" class="nav__link active">Home</a></li>
-                    <li class="nav__item" id ="about" ><a href="" class="nav__link">About</a>
+                    <li class="nav__item" id ="about" class="nav__link">About
                     <ul class="goal">
-                    <li><a href="whatwedo">What We do</a></li>
-                    <li><a href="goal">Our Goal</a></li>
+                    <li><a href="whatwedo" class="whatwedo">What We do</a></li>
+                    <li><a href="goal" class="goals">Our Goal</a></li>
                     </ul>
                     </li>
-                    <li class="nav__item" id="programs"><a href="" class="nav__link">Programs</a>
+                    <li class="nav__item" id="programs" class="nav__link">Programs
                     <ul class="side_menu">
-                        <li ><a href="high" >High School</a></li>
-                        <li ><a href="kenyan" >Kenya Undergrade</a></li>
-                        <li ><a href="abroad" >Abroad Undergrade</a></li>
+                        <li ><a href="high" id="high">High School</a></li>
+                        <li ><a href="kenyan" id = "kenyan">Kenya Undergrade</a></li>
+                        <li ><a href="abroad" id="abroad" >Abroad Undergrade</a></li>
                     </ul> </li>
                     <li class="nav__item"><a href="news" class="nav__link">News</a></li>
                 </ul>

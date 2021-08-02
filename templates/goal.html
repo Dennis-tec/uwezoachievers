@@ -157,9 +157,16 @@ justify-content: space-between;
         display: none;
         font-size: 15px;
         font-weight: lighter;
-        position: absolute;
-        background-color: #02092c;
+        position: relative;
+        background-color: transparent;
+        left: 7%;
+        margin-top:5%;
 
+ }
+ .goals, .whatwedo, #kenyan, #abroad, #high{
+     color: white;
+     font-size: 14px;
+     font-weight: lighter;
  }
  .side_menu li:hover{
     background-color: rgb(4, 69, 95);
@@ -170,7 +177,25 @@ justify-content: space-between;
 #programs:hover .side_menu ul{
  display: block;
 }
+.goal{
+        font-size: 15px;
+        font-weight: lighter;
+        background-color: transparent;
+        position: relative;
+        left: 7%;
+        margin-top:7%;
 
+
+ }
+ .goal li:hover{
+    background-color: rgb(4, 69, 95);
+}
+#about:hover .goal{
+            display: block;
+}
+#about:hover .goal ul{
+    display: block;
+}
 #loginbtn, #logoutbtn, #registerbtn{
     color: white;
     font-size: 15px;
@@ -264,15 +289,15 @@ justify-content: space-between;
                     <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
                     <li class="nav__item" id ="about" ><a href="" class="nav__link active">About</a>
                     <ul class="goal">
-                    <li><a href="whatwedo">What We do</a></li>
-                    <li><a href="goal">Our Goal</a></li>
+                        <li><a href="whatwedo" class="whatwedo">What We do</a></li>
+                        <li><a href="goal" class="goals">Our Goal</a></li>
                     </ul>
                     </li>
                     <li class="nav__item" id="programs"><a href="#skills" class="nav__link">Programs</a>
                     <ul class="side_menu">
-                        <li ><a href="high" >High School</a></li>
-                        <li ><a href="kenyan" >Kenya Undergrade</a></li>
-                        <li ><a href="abroad" >Abroad Undergrade</a></li>
+                        <li ><a href="high" id="high">High School</a></li>
+                        <li ><a href="kenyan" id = "kenyan">Kenya Undergrade</a></li>
+                        <li ><a href="abroad" id="abroad" >Abroad Undergrade</a></li>
                     </ul> </li>
                     <li class="nav__item"><a href="news" class="nav__link">News</a></li>
                 </ul>
