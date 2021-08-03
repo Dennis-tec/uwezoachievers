@@ -13,6 +13,7 @@
 </head>
 <body>
     <style>
+
         .head{
             background-color: #02092c;
 
@@ -284,6 +285,49 @@ li a {
 .show{
   right: 0;
 }
+.form{
+    text-align: center;
+    color: white;
+    height: 400px;
+    margin-top: 7.5%;
+    background-color: rgba(128, 128, 128, 0.596);
+}
+.form h3{
+    padding-top: 2%;
+    line-height: 40px;
+    border-bottom: 3px solid rgb(8, 89, 240);
+    display: inline-block;
+    text-decoration-style: wavy;
+}
+#name, #phone{
+    height: 40px;
+    font-size: 16px;
+}
+#email{
+    width: 410px;
+    margin-top: 5px;
+    height: 40px;
+    font-size: 16px;
+
+
+}
+#message{
+    width: 410px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+#subbtn{
+    width: 410px;
+    font-size: 20px;
+    background-color: rgb(8, 186, 240);
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.25rem;
+}
+#subbtn:hover{
+    background-color: rgb(47, 118, 248);
+}
 
     </style>
      <!--===== HEAD =====-->
@@ -338,10 +382,21 @@ li a {
 <p>Uwezo Achievers provides access to high school and undergraduate  <br> education’s scholarships for potential, needy Kenyan graduates <br> who would otherwise have no chance to continue with their studies. <br> “Education is the most powerful weapon that we can <br> use to change the world”, Nelson Mandela. 
 </p>
     </div>
-<div class="subscribe">
-
+    <div class="history">
+<h3>History</h3>
+<img src="{% static 'img/profile.jpg' %}" alt="">
+    </div>
+    <!--=====Contact Form====-->
+<div class="form">
+    <h3>Contact Us</h3>
+<form action="">
+<input type="text" id = "name" placeholder="Name">
+<input type="text" id = "phone" placeholder="Phone No:"> <br>
+<input type="email" id = "email"placeholder="Email"> <br>
+<textarea rows="7" id = "message" placeholder="Message"></textarea> <br>
+<input type="submit" id = "subbtn" value="Submit">
+</form>
 </div>
-    </main>
  <!--===== FOOTER =====-->
  <footer class="footer">
     <p class="footer__title">Uwezo <br> Achievers</p>
