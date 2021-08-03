@@ -285,9 +285,32 @@ li a {
 .show{
   right: 0;
 }
+.history{
+    text-align: center;
+}
+.history h3{
+line-height: 40px;
+border-bottom: 3px solid rgb(8, 89, 240);
+display: inline-block;
+margin-top: 7.5%;
+text-align: center;
+}
+.history img{
+    width: 350px;
+    padding-left: 50px;
+    
+}
+.myprof p{
+    padding-left: 50px;
+    border-color: springgreen;
+ 
+}
+.history img:hover{
+    opacity: 0.4;
+}
+
 .form{
     text-align: center;
-    color: white;
     height: 400px;
     margin-top: 7.5%;
     background-color: rgba(128, 128, 128, 0.596);
@@ -298,6 +321,7 @@ li a {
     border-bottom: 3px solid rgb(8, 89, 240);
     display: inline-block;
     text-decoration-style: wavy;
+    
 }
 #name, #phone{
     height: 40px;
@@ -318,7 +342,7 @@ li a {
 }
 #subbtn{
     width: 410px;
-    font-size: 20px;
+    font-size: 18px;
     background-color: rgb(8, 186, 240);
     height: 50px;
     color: white;
@@ -383,17 +407,19 @@ li a {
 </p>
     </div>
     <div class="history">
-<h3>History</h3>
-<img src="{% static 'img/profile.jpg' %}" alt="">
+        <h3>History</h3>
+<span class="myprof"><img src="{% static 'img/profile.jpg' %}" alt=""> <p>Founder & CEO Uwezo Achievers</p>
+</span>
+        <p></p>
     </div>
     <!--=====Contact Form====-->
 <div class="form">
     <h3>Contact Us</h3>
 <form action="">
-<input type="text" id = "name" placeholder="Name">
-<input type="text" id = "phone" placeholder="Phone No:"> <br>
-<input type="email" id = "email"placeholder="Email"> <br>
-<textarea rows="7" id = "message" placeholder="Message"></textarea> <br>
+<input type="text" id = "name" placeholder="Name" required>
+<input type="text" id = "phone" placeholder="Phone No:" required> <br>
+<input type="email" id = "email"placeholder="Email" required> <br>
+<textarea rows="7" id = "message" placeholder="Message" required></textarea> <br>
 <input type="submit" id = "subbtn" value="Submit">
 </form>
 </div>
