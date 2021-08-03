@@ -8,12 +8,12 @@
 ### Description
 Uwezo Achievers was developed to aid gifted and needy scholars who are unable to cater to their tuition fees. This app targets Kenya Certificate Of Secondary Education(KCSE) and Kenya Certificate Of Primary Education (KCPE) graduates from low-income backgrounds, precisely those from rural settings in Kenya. The project, voluntarily, exposes them to diverse scholarship programs that can cater to their education expenses depending on their level of studies. Through Uwezo Achievers, learners will be introduced to requirements, the application process, and the application deadline for each program. The operation also prepares these students for interviews and essay writing for free. To learn about scholarship programs, scholars will need to click on Programs on the nav menu using a computer, laptop, or tablet. When using an iPhone or Smartphone, students will have to click on Programs on the navbar. From there, they can choose whether they need to go through high school, Kenyan undergrad, or abroad undergrad scholarship programs after login.
 #####                Computer/Laptop/Tablet
-![](img/comp1.jpg)
-![](img/comp2.jpg)
+![](https://github.com/Dennis-tec/uwezoachievers/blob/master/static/img/comp1.jpg)
+![](https://github.com/Dennis-tec/uwezoachievers/blob/master/static/img/comp2.jpg)
 
 #####                 iPhone/Smartphone
-![](img/phone1.jpg)
-![](img/phone2.jpg) 
+![](https://github.com/Dennis-tec/uwezoachievers/blob/master/static/img/phone1.jpg)
+![](https://github.com/Dennis-tec/uwezoachievers/blob/master/static/img/phone2.jpg) 
 
 ### Set up Installation
 * Browser(Google Chrome, Microsoft Edge, Opera Mini, Safari, and Firfoxrecommended)
