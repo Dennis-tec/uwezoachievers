@@ -39,4 +39,4 @@ So far there are no bugs known in this app. But if you come across one feel free
 * Email: ykamakei6345@gmail.com 
 
 ### Licence
-*[MIT](LICENSE)*Copyright (c) **Dennis Yiaile 2021**
+*[MIT](LICENSE)* Copyright (c) **Dennis Yiaile 2021**
