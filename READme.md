@@ -18,7 +18,7 @@ Uwezo Achievers was developed to aid gifted and needy scholars who are unable to
 ### Set up Installation
 * Browser(Google Chrome, Microsoft Edge, Opera Mini, Safari, and Firfoxrecommended)
 * Internet
-* Laptop/Tablet/Computer/Smartphone/Iphone
+* Laptop/Tablet/Computer/Smartphone/iPhone
 * Access it via this live link https://uwezoachievers.herokuapp.com/ Or have git and Github account.
 * Fork then clone git clone https://github.com/Dennis-tec/uwezoachievers
 
