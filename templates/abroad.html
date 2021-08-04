@@ -90,7 +90,7 @@ color: white;
   .grid{
     margin-left: auto;
     margin-right: auto;
-  }
+
 }
 .intro{
     padding-top: 65px;
@@ -141,6 +141,13 @@ right: 0;
 .login-register li{
 display: inline-block;
 justify-content: space-between;
+}
+#name, #phone{
+    width: 203px;
+}
+#email, #message, #subbtn{
+    width: 410px;
+}
 }
 @media screen and (max-width: 768px){
 .nav_menu{
@@ -238,6 +245,11 @@ justify-content: space-between;
     font-weight: lighter;
     font-size: 12px;
 }
+#name, #phone, #email, #message, #subbtn{
+    margin-top: 5px;
+    width: 100%;
+    width: 100%;
+}
 }
 
 .menu_bar{
@@ -258,7 +270,7 @@ justify-content: space-between;
     background-color: rgba(5, 16, 37, 0.87);
     margin-bottom: 0%;
 }
-*Active menu*/
+/*Active menu*/
 .active::after{
   position: absolute;
   content: "";
@@ -275,9 +287,11 @@ justify-content: space-between;
 }
 .form{
     text-align: center;
-    height: 400px;
+    height: 430px;
     margin-top: 7.5%;
     background-color: rgba(128, 128, 128, 0.596);
+    width: auto;
+
 }
 .form h3{
     padding-top: 2%;
@@ -292,7 +306,6 @@ justify-content: space-between;
     font-size: 16px;
 }
 #email{
-    width: 410px;
     margin-top: 5px;
     height: 40px;
     font-size: 16px;
@@ -300,21 +313,26 @@ justify-content: space-between;
 
 }
 #message{
-    width: 410px;
     margin-top: 5px;
     font-size: 16px;
 }
 #subbtn{
-    width: 410px;
     font-size: 18px;
     background-color: rgb(8, 186, 240);
     height: 50px;
     color: white;
     font-weight: bold;
     border-radius: 0.25rem;
+    font-family: 'Courier New', Courier, monospace;
+
 }
 #subbtn:hover{
     background-color: rgb(47, 118, 248);
+}
+.number h5{
+line-height: 40px;
+border-bottom: 3px solid rgb(66, 125, 235);
+display: inline-block;
 }
 .address{
     font-size: 14px;
@@ -344,14 +362,14 @@ justify-content: space-between;
 
             <div class="nav_menu" id = "nav_menu">
                 <ul class="nav__list" id="nav_list">
-                    <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="/" class="nav__link active">Home</a></li>
                     <li class="nav__item" id ="about" class="nav__link">About <i class="bx bx-chevron-down"></i>
                     <ul class="goal">
                         <li><a href="whatwedo" class="whatwedo">What We do</a></li>
                         <li><a href="goal" class="goals">Our Goal</a></li>
                     </ul>
                     </li>
-                    <li class="nav__item" id="programs" class="nav__link active">Programs <i class="bx bx-chevron-down"></i>
+                    <li class="nav__item" id="programs" class="nav__link active">Programs<i class="bx bx-chevron-down"></i>
                     <ul class="side_menu">
                         <li ><a href="high" id="high">High School</a></li>
                         <li ><a href="kenyan" id = "kenyan">Kenya Undergrade</a></li>
@@ -392,7 +410,7 @@ justify-content: space-between;
 <input type="text" id = "phone" placeholder="Phone No:" required> <br>
 <input type="email" id = "email"placeholder="Email" required> <br>
 <textarea rows="7" id = "message" placeholder="Message" required></textarea> <br>
-<input type="submit" id = "subbtn" value="Submit">
+<input type="submit" id = "subbtn" value="SUBMIT">
 </form>
 </div>
  <!--===== FOOTER =====-->
@@ -400,7 +418,7 @@ justify-content: space-between;
     <p class="footer__title">Uwezo <br> Achievers</p>
     <div class="number"><h5>Get In Touch</h5> </div>
     <div class="address">
-        <p>Dennis Yiaile 370 Lancaster Ave, Haverford, PA, USA</p> <br>
+        <p>370 Lancaster Ave, Haverford, PA, USA</p> <br>
         <p>Dennis Yiaile, Executive Director (ykamakei6345@gmail.com)</p>
     </div>
       <div class="footer__social">
@@ -431,7 +449,7 @@ justify-content: space-between;
 
             <div class="nav_menu" id = "nav_menu">
                 <ul class="nav__list" id="nav_list">
-                    <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="/" class="nav__link active">Home</a></li>
                     <li class="nav__item" id ="about" class="nav__link">About <i class="bx bx-chevron-down"></i>
                     <ul class="goal">
                         <li><a href="whatwedo" class="whatwedo">What We do</a></li>
@@ -478,7 +496,7 @@ justify-content: space-between;
 <input type="text" id = "phone" placeholder="Phone No:" required> <br>
 <input type="email" id = "email"placeholder="Email" required> <br>
 <textarea rows="7" id = "message" placeholder="Message" required></textarea> <br>
-<input type="submit" id = "subbtn" value="Submit">
+<input type="submit" id = "subbtn" value="SUBMIT">
 </form>
 </div>
  <!--===== FOOTER =====-->
@@ -486,7 +504,7 @@ justify-content: space-between;
     <p class="footer__title">Uwezo <br> Achievers</p>
     <div class="number"><h5>Get In Touch</h5> </div>
     <div class="address">
-        <p>Dennis Yiaile 370 Lancaster Ave, Haverford, PA, USA</p> <br>
+        <p>370 Lancaster Ave, Haverford, PA, USA</p> <br>
         <p>Dennis Yiaile, Executive Director (ykamakei6345@gmail.com)</p>
     </div>
       <div class="footer__social">
