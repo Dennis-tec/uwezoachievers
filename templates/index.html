@@ -263,12 +263,13 @@ li a {
     align-items: center;
     text-align: center;
     font-weight: lighter;
-    background-color: rgba(9, 40, 107, 0.932);
+    background-color: rgba(9, 40, 107, 0.863);
     background-position: center;
     margin-top: 40px;
 }
 .footer{
-    background-color: rgba(1, 29, 88, 0.932);
+    background-color: rgba(5, 16, 37, 0.87);
+    margin-bottom: 0%;
 }
 /*Active menu*/
 .active::after{
@@ -285,10 +286,27 @@ li a {
 .show{
   right: 0;
 }
-.history{
+.events{
     text-align: center;
 }
-.history h3{
+.events h3{
+line-height: 40px;
+border-bottom: 3px solid rgb(8, 89, 240);
+display: inline-block;
+margin-top: 7.5%;
+text-align: center;
+}
+
+#history{
+    text-align: center;
+}
+.history{
+    columns: 2;
+    display: block;
+    position: relative;
+    margin-left: 30px;
+}
+#history h3{
 line-height: 40px;
 border-bottom: 3px solid rgb(8, 89, 240);
 display: inline-block;
@@ -297,17 +315,30 @@ text-align: center;
 }
 .history img{
     width: 350px;
-    padding-left: 50px;
+    padding-left: 30px;
+    padding-top: 20px;
     
 }
+#history{
+    font-size: 15px;
+}
+.mystory p{
+    font-size: 14px;
+}
+.myprof{
+    background-color: rgba(128, 128, 128, 0.205);
+    width: 380px;
+    border-radius: 0.9rem;
+    margin-left: 50px;
+}
 .myprof p{
-    padding-left: 50px;
-    border-color: springgreen;
+    padding-left: 60px;
  
 }
 .history img:hover{
     opacity: 0.4;
 }
+
 
 .form{
     text-align: center;
@@ -352,6 +383,17 @@ text-align: center;
 #subbtn:hover{
     background-color: rgb(47, 118, 248);
 }
+.address{
+    font-size: 14px;
+    font-weight: lighter;
+    margin-bottom: 3%;
+}
+.copyright{
+    font-size: 14px;
+    font-weight: lighter;
+    margin-bottom: 0%;
+}
+
 
     </style>
      <!--===== HEAD =====-->
@@ -403,14 +445,28 @@ text-align: center;
 
     {% endif%}
     <div class="home">
-<p>Uwezo Achievers provides access to high school and undergraduate  <br> education’s scholarships for potential, needy Kenyan graduates <br> who would otherwise have no chance to continue with their studies. <br> “Education is the most powerful weapon that we can <br> use to change the world”, Nelson Mandela. 
+<p>“Education is the most powerful weapon that we <br> can use to change the world”, Nelson Mandela. 
 </p>
     </div>
-    <div class="history">
+    <div class="events">
+<h3>Highlights</h3>
+<img src="{% static 'img/highlights.jpg %}" alt="">
+<p>Uwezo Achievers provides access to high school and undergraduate  <br> education’s scholarships for potential, needy Kenyan graduates <br> who would otherwise have no chance to continue with their studies. </p>
+    </div>
+    <div id="history">
         <h3>History</h3>
-<span class="myprof"><img src="{% static 'img/profile.jpg' %}" alt=""> <p>Founder & CEO Uwezo Achievers</p>
-</span>
-        <p></p>
+    </div>
+    <div class="history">
+<div class="mystory">
+    <p>Uwezo Achievers was founded by Dennis Yiaile, the President of this program, in 2021. Dennis is currently a student at Haverford College, USA, Kenya Scholar Access Program (KenSAP) alumnus 2020, and Equity Leadership Program(ELP) alumnus 2019. He hails from a humble background in Ngosuani, a rural village in southern Kenya. Like many children in this locality, he had limited knowledge about the outside world but that didn’t deter his ambition to study at a liberal art institution in North America. <br> <br> To help gifted and needy scholars who are unable to advance their education dreams due to lack of tuition fees, he founded Uwezo Achievers. The program targets Kenya Certificate Of Secondary Education(KCSE) and Kenya Certificate Of Primary Education (KCPE) graduates from low-income backgrounds, particularly those from rural settings in Kenya. The program, voluntarily, exposes them to diverse scholarship programs that can cater to their education expenses depending on their level of studies.</p> <br>
+    <p>“Wherever my pursuit of knowledge takes me, I hope that my story, endeavors, abilities, and experiences will motivate students from low-income backgrounds, precisely those from rural settings in Kenya to follow my path, or to chart their own, with a quality education.”Dennis Yiaile
+    </p>        
+</div>
+<div class="myprof">
+            <img src="{% static 'img/profile.jpg' %}" alt=""> 
+            <p>Founder & CEO Uwezo Achievers</p>
+        </div>
+       
     </div>
     <!--=====Contact Form====-->
 <div class="form">
@@ -427,14 +483,21 @@ text-align: center;
  <footer class="footer">
     <p class="footer__title">Uwezo <br> Achievers</p>
     <div class="number"><h5>Get In Touch</h5> </div>
+    <div class="address">
+        <p>Dennis Yiaile 370 Lancaster Ave, Haverford, PA, USA</p> <br>
+        <p>Dennis Yiaile, Executive Director (ykamakei6345@gmail.com)</p>
+    </div>
       <div class="footer__social">
           <a href="https://www.linkedin.com/in/dennis-yiaile-3ab6851a7" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
           <a href="https://www.facebook.com/denno.kamakx" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
           <a href="https://www.instagram.com/yiaile_kamakei/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
           <a href="https://twitter.com/YKamakei?s=08" class="footer__icon"><i class='bx bxl-twitter'></i></a>
       </div>
-      <p>&#169; 2021 Uwezo Achievers. All Rights Reserved.</p>
-</footer>
+<div class="copyright">
+    <p>&#169; 2021 Dennis Yiaile. All Rights Reserved.</p>
+
+</div>
+    </footer>
 <script src="{% static 'scripts.js' %}"></script>
 
 </body>
