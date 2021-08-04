@@ -18,6 +18,9 @@
             background-color: #02092c;
 
         }
+        body{
+            overflow-x: hidden;
+        }
         .intro{
             height: 400px;
         }
@@ -96,7 +99,11 @@ color: white;
     margin-left: auto;
     margin-right: auto;
   }
-}
+  .events img{
+      padding-left: 50px;
+      width: 450px2;
+  }
+ 
 .intro{
     padding-top: 65px;
     background-image: url("{% static 'img/background.jpg' %}");
@@ -146,6 +153,55 @@ right: 0;
 .login-register li{
 display: inline-block;
 justify-content: space-between;
+}
+}
+.history img{
+    width: 350px;
+    padding-left: 30px;
+    padding-top: 20px;
+
+}
+#history{
+    font-size: 15px;
+    text-align: center;
+
+}
+.mystory p{
+    font-size: 14px;
+}
+.myprof{
+    background-color: rgba(128, 128, 128, 0.205);
+    width: 380px;
+    border-radius: 0.9rem;
+    margin-left: 50px;
+}
+.myprof p{
+    padding-left: 60px;
+ 
+}
+
+.history{
+    columns: 2;
+    display: block;
+    position: relative;
+    margin-left: 30px;
+
+}
+#history h3{
+line-height: 40px;
+border-bottom: 3px solid rgb(8, 89, 240);
+display: inline-block;
+margin-top: 7.5%;
+text-align: center;
+}
+
+
+.myprof{
+    background-color: rgba(128, 128, 128, 0.205);
+    border-radius: 0.9rem;
+}
+.history img:hover{
+    opacity: 0.4;
 }
 @media screen and (max-width: 768px){
 .nav_menu{
@@ -247,10 +303,53 @@ li a {
     height: 200px;
 }
 .home p{
-    padding-top: 10px;
+    padding-top: 18%;
     font-weight: lighter;
     font-size: 12px;
 }
+.events{
+font-size: 12px;
+columns: 2;
+display: block;
+position: relative;
+}
+.eventshead{
+    margin-top: 8%;
+}
+.eventsimg{
+    margin-left: 2%;
+    
+}
+.events img{
+    width: 450px;
+}
+.eventshead{
+    font-size: 14px;
+}
+.mystory p{
+    font-size: 12px;
+}
+.history{
+    margin-left: 1%;
+    margin-right: 1%;
+    columns: 1;
+}
+.myprof{
+    font-size: 12px;
+    margin-left: 1%;
+    width: 280px;
+    margin-right: 1%;
+
+}
+.myprof p{
+    font-size: 13px;
+    font-weight: bold;
+}
+.myprof img{
+    width: 300px;
+    padding-left: 1%;
+}
+
 }
 
 .menu_bar{
@@ -287,57 +386,25 @@ li a {
   right: 0;
 }
 .events{
-    text-align: center;
-}
-.events h3{
-line-height: 40px;
-border-bottom: 3px solid rgb(8, 89, 240);
-display: inline-block;
-margin-top: 7.5%;
-text-align: center;
+columns: 2;
+display: block;
+column-gap: 1px;
 }
 
-#history{
-    text-align: center;
-}
-.history{
-    columns: 2;
-    display: block;
-    position: relative;
-    margin-left: 30px;
-}
-#history h3{
+
+.eventshead h3{
 line-height: 40px;
 border-bottom: 3px solid rgb(8, 89, 240);
 display: inline-block;
 margin-top: 7.5%;
-text-align: center;
 }
-.history img{
-    width: 350px;
-    padding-left: 30px;
-    padding-top: 20px;
-    
+.eventshead{
+    text-align: center;
 }
-#history{
-    font-size: 15px;
+.events img{
+    width: 450px;
 }
-.mystory p{
-    font-size: 14px;
-}
-.myprof{
-    background-color: rgba(128, 128, 128, 0.205);
-    width: 380px;
-    border-radius: 0.9rem;
-    margin-left: 50px;
-}
-.myprof p{
-    padding-left: 60px;
- 
-}
-.history img:hover{
-    opacity: 0.4;
-}
+
 
 
 .form{
@@ -345,6 +412,7 @@ text-align: center;
     height: 400px;
     margin-top: 7.5%;
     background-color: rgba(128, 128, 128, 0.596);
+    width: auto;
 }
 .form h3{
     padding-top: 2%;
@@ -448,10 +516,16 @@ text-align: center;
 <p>“Education is the most powerful weapon that we <br> can use to change the world”, Nelson Mandela. 
 </p>
     </div>
+
+    <div class="eventshead">
+        <h3>Highlights</h3>
+    </div>
     <div class="events">
-<h3>Highlights</h3>
-<img src="{% static 'img/highlights.jpg %}" alt="">
-<p>Uwezo Achievers provides access to high school and undergraduate  <br> education’s scholarships for potential, needy Kenyan graduates <br> who would otherwise have no chance to continue with their studies. </p>
+<div class="eventsimg">
+    <img src="{% static 'img/highlights.jpg' %}" alt="">
+
+</div>
+        <p>Uwezo Achievers provides access to high school and undergraduate education’s scholarships for potential, needy Kenyan graduates who <br> would otherwise have no chance to continue with their studies. </p>
     </div>
     <div id="history">
         <h3>History</h3>
@@ -464,7 +538,7 @@ text-align: center;
 </div>
 <div class="myprof">
             <img src="{% static 'img/profile.jpg' %}" alt=""> 
-            <p>Founder & CEO Uwezo Achievers</p>
+            <p>President Uwezo Achievers</p>
         </div>
        
     </div>

@@ -258,7 +258,8 @@ justify-content: space-between;
     margin-top: 40px;
 }
 .footer{
-    background-color: rgba(1, 29, 88, 0.932);
+    background-color: rgba(5, 16, 37, 0.87);
+    margin-bottom: 0%;
 }
 *Active menu*/
 .active::after{
@@ -274,6 +275,59 @@ justify-content: space-between;
 /*=== Show menu ===*/
 .show{
   right: 0;
+}
+.form{
+    text-align: center;
+    height: 400px;
+    margin-top: 7.5%;
+    background-color: rgba(128, 128, 128, 0.596);
+}
+.form h3{
+    padding-top: 2%;
+    line-height: 40px;
+    border-bottom: 3px solid rgb(8, 89, 240);
+    display: inline-block;
+    text-decoration-style: wavy;
+    
+}
+#name, #phone{
+    height: 40px;
+    font-size: 16px;
+}
+#email{
+    width: 410px;
+    margin-top: 5px;
+    height: 40px;
+    font-size: 16px;
+
+
+}
+#message{
+    width: 410px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+#subbtn{
+    width: 410px;
+    font-size: 18px;
+    background-color: rgb(8, 186, 240);
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.25rem;
+}
+#subbtn:hover{
+    background-color: rgb(47, 118, 248);
+}
+.address{
+    font-size: 14px;
+    font-weight: lighter;
+    margin-bottom: 3%;
+}
+.copyright{
+    font-size: 14px;
+    font-weight: lighter;
+    margin-bottom: 0%;
 }
 
     </style>
@@ -327,25 +381,42 @@ justify-content: space-between;
 
     {% endif%}
     <div class="home">
-<p>Uwezo Achievers provides access to high school and undergraduate  <br> education’s scholarships for potential, needy Kenyan graduates <br> who would otherwise have no chance to continue with their studies. <br> “Education is the most powerful weapon that we can <br> use to change the world”, Nelson Mandela. 
+<p>Uwezo Achievers provides access to high school and undergraduate  <br> education’s scholarships for potential, needy Kenyan graduates <br> who would otherwise have no chance to continue with their studies. <br> <br> “Education is the most powerful weapon that we can <br> use to change the world”, Nelson Mandela. 
 </p>
     </div>
 <div class="subscribe">
 
 </div>
-    </main>
+<!--=====Contact Form====-->
+<div class="form">
+    <h3>Contact Us</h3>
+<form action="">
+<input type="text" id = "name" placeholder="Name" required>
+<input type="text" id = "phone" placeholder="Phone No:" required> <br>
+<input type="email" id = "email"placeholder="Email" required> <br>
+<textarea rows="7" id = "message" placeholder="Message" required></textarea> <br>
+<input type="submit" id = "subbtn" value="Submit">
+</form>
+</div>
  <!--===== FOOTER =====-->
  <footer class="footer">
     <p class="footer__title">Uwezo <br> Achievers</p>
     <div class="number"><h5>Get In Touch</h5> </div>
+    <div class="address">
+        <p>Dennis Yiaile 370 Lancaster Ave, Haverford, PA, USA</p> <br>
+        <p>Dennis Yiaile, Executive Director (ykamakei6345@gmail.com)</p>
+    </div>
       <div class="footer__social">
           <a href="https://www.linkedin.com/in/dennis-yiaile-3ab6851a7" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
           <a href="https://www.facebook.com/denno.kamakx" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
           <a href="https://www.instagram.com/yiaile_kamakei/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
           <a href="https://twitter.com/YKamakei?s=08" class="footer__icon"><i class='bx bxl-twitter'></i></a>
       </div>
-      <p>&#169; 2021 Uwezo Achievers. All Rights Reserved.</p>
-</footer>
+<div class="copyright">
+    <p>&#169; 2021 Dennis Yiaile. All Rights Reserved.</p>
+
+</div>
+    </footer>
 
      <!--===== HEAD =====-->
      {% else %}
@@ -402,19 +473,36 @@ justify-content: space-between;
 <div class="subscribe">
 
 </div>
-    </main>
+ <!--=====Contact Form====-->
+<div class="form">
+    <h3>Contact Us</h3>
+<form action="">
+<input type="text" id = "name" placeholder="Name" required>
+<input type="text" id = "phone" placeholder="Phone No:" required> <br>
+<input type="email" id = "email"placeholder="Email" required> <br>
+<textarea rows="7" id = "message" placeholder="Message" required></textarea> <br>
+<input type="submit" id = "subbtn" value="Submit">
+</form>
+</div>
  <!--===== FOOTER =====-->
  <footer class="footer">
     <p class="footer__title">Uwezo <br> Achievers</p>
     <div class="number"><h5>Get In Touch</h5> </div>
+    <div class="address">
+        <p>Dennis Yiaile 370 Lancaster Ave, Haverford, PA, USA</p> <br>
+        <p>Dennis Yiaile, Executive Director (ykamakei6345@gmail.com)</p>
+    </div>
       <div class="footer__social">
           <a href="https://www.linkedin.com/in/dennis-yiaile-3ab6851a7" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
           <a href="https://www.facebook.com/denno.kamakx" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
           <a href="https://www.instagram.com/yiaile_kamakei/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
           <a href="https://twitter.com/YKamakei?s=08" class="footer__icon"><i class='bx bxl-twitter'></i></a>
       </div>
-      <p>&#169; 2021 Uwezo Achievers. All Rights Reserved.</p>
-</footer>
+<div class="copyright">
+    <p>&#169; 2021 Dennis Yiaile. All Rights Reserved.</p>
+
+</div>
+    </footer>
 {% endif %}
 <script src="{% static 'scripts.js' %}"></script>
 
