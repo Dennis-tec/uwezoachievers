@@ -86,30 +86,48 @@ color: white;
    background-color: hsla(hue, saturation, lightness, alpha); 
   }
 }
- @media screen and (min-width: 1024px){
-  .grid{
-    margin-left: auto;
-    margin-right: auto;
+/* ===== MEDIA QUERIES===== */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  body{
+    margin: 0;
   }
-.intro{
-    padding-top: 65px;
-    background-image: url("{% static 'img/graduation1.jpg' %}");
-    background-position: center;
-    background-size: contain;
-    
+  .nav_menu ul li a{
+      color: white;
+  }
+.side_menu{
+  font-size: 15px;
+  display: none;
+
 }
-.home{
+  .nav{
+    height: calc(var(--header-height) + 1rem);
+  }
+  .nav__list{
+    display: flex;
+    padding-top: 0;
+  }
+  .nav__item{
+    margin-left: var(--mb-6);
+    margin-bottom: 0;
+  }
+  .menu_bar{
+    display: none;
+  }
+  .nav__link{
+    color: var(--second-color);
+  }
+  .home{
   height: 200px; 
 }
 .home p{
     padding-top: 35px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 #loginbtn, #logoutbtn, #registerbtn{
     font-size: 17px;
     font-weight: bold;
-    background-color: transparent;
+    background-color: rgb(47, 118, 248);
     color: #fff;
     padding: .25rem 1.0rem;
     border-radius: 25px;
@@ -140,6 +158,78 @@ right: 0;
 .login-register li{
 display: inline-block;
 justify-content: space-between;
+}
+#name, #phone{
+    width: 203px;
+}
+#email, #message, #subbtn{
+    width: 410px;
+}
+.ourgoal{
+font-size: 13.8px;
+}
+.goalshead h3{
+    margin-top: 5%;
+}
+
+}
+ @media screen and (min-width: 1024px) {
+  .grid{
+    margin-left: auto;
+    margin-right: auto;
+  }
+.intro{
+    padding-top: 65px;
+    background-image: url("{% static 'img/graduation1.jpg' %}");
+    background-position: center;
+    background-size: contain;
+    
+}
+.home{
+  height: 200px; 
+}
+.home p{
+    padding-top: 35px;
+    font-size: 14px;
+}
+
+#loginbtn, #logoutbtn, #registerbtn{
+    font-size: 17px;
+    font-weight: bold;
+    background-color: rgb(47, 118, 248);
+    color: #fff;
+    padding: .25rem 1.0rem;
+    border-radius: 25px;
+    animation: size 5s infinite;
+    border-color: white;
+}
+@keyframes size{
+    0%{
+        padding: .28rem 0.95rem;
+
+    }
+    30%{
+        padding: .22rem 1.05rem;
+
+    }
+}
+#loginbtn:hover, #logoutbtn:hover, #registerbtn:hover{
+    padding: .27rem 1.0rem;
+    background-color: white;
+    color: black;
+
+}
+.login-register, #logoutbtn{
+position: fixed;
+right: 0;
+
+}
+.login-register li{
+display: inline-block;
+justify-content: space-between;
+}
+.ourgoal{
+    font-size: 14.5px;
 }
 #name, #phone{
     width: 203px;
@@ -184,7 +274,7 @@ justify-content: space-between;
 line-height: 40px;
 border-bottom: 3px solid rgb(8, 89, 240);
 display: inline-block;
-margin-top: 7.5%;
+margin-top: 1%;
 text-align: center;
 }
 
@@ -254,7 +344,7 @@ text-align: center;
     color: white;
     font-size: 15px;
     font-weight: bold;
-    background-color: transparent;
+    background-color: rgb(47, 118, 248);
     color: #fff;
     padding: .18rem 0.7rem;
     border-radius: 25px;
@@ -293,20 +383,20 @@ text-align: center;
 .ourgoal{
 font-size: 12px;
 }
-.goalshead{
-    margin-top: 8%;
-    font-size: 14px;
-}
+
 .goalshead h3{
+    margin-top: 11.5%;
     font-size: 15px;
+
 }
 .mystory p{
     font-size: 12px;
 }
 .history{
     margin-left: 1%;
-    margin-right: 1%;
     columns: 1;
+    margin-left: 1%;
+
 }
 .myprof{
     font-size: 12px;
@@ -323,13 +413,13 @@ font-size: 12px;
 .myprof img{
     padding-left: 1%;
     width: 100%;
-    width: 300;
 }
 #name, #phone, #email, #message, #subbtn{
     margin-top: 5px;
     width: 100%;
     width: 100%;
 }
+
 }
 
 .menu_bar{
@@ -349,12 +439,13 @@ font-size: 12px;
 
 .goalshead{
     text-align: center;
+    margin-top: 7%;
+
 }
 .goalshead h3{
 line-height: 40px;
 border-bottom: 3px solid rgb(8, 89, 240);
 display: inline-block;
-margin-top: 7.5%;
 }
 .ourgoal{
     justify-content: center;

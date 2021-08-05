@@ -20,7 +20,8 @@
         }
         .intro{
             height: 400px;
-        }
+        }            
+        
         .side_menu{
             display: none;
             font-size: 15px;
@@ -86,31 +87,48 @@ color: white;
    background-color: hsla(hue, saturation, lightness, alpha); 
   }
 }
- @media screen and (min-width: 1024px){
-  .grid{
-    margin-left: auto;
-    margin-right: auto;
+/* ===== MEDIA QUERIES===== */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  body{
+    margin: 0;
+  }
+  .nav_menu ul li a{
+      color: white;
+  }
+.side_menu{
+  font-size: 15px;
+  display: none;
 
 }
-.intro{
-    padding-top: 65px;
-    background-image: url("{% static 'img/library4.jpg' %}");
-    background-position: center;
-    background-size: contain;
-    
-}
-.home{
+  .nav{
+    height: calc(var(--header-height) + 1rem);
+  }
+  .nav__list{
+    display: flex;
+    padding-top: 0;
+  }
+  .nav__item{
+    margin-left: var(--mb-6);
+    margin-bottom: 0;
+  }
+  .menu_bar{
+    display: none;
+  }
+  .nav__link{
+    color: var(--second-color);
+  }
+  .home{
   height: 200px; 
 }
 .home p{
     padding-top: 35px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 #loginbtn, #logoutbtn, #registerbtn{
     font-size: 17px;
     font-weight: bold;
-    background-color: transparent;
+    background-color: rgb(47, 118, 248);
     color: #fff;
     padding: .25rem 1.0rem;
     border-radius: 25px;
@@ -141,6 +159,78 @@ right: 0;
 .login-register li{
 display: inline-block;
 justify-content: space-between;
+}
+.highhead h3{
+    margin-top: 12%;
+}
+.highprograms{
+    font-size: 13.5px;
+}
+#name, #phone{
+    width: 203px;
+}
+#email, #message, #subbtn{
+    width: 410px;
+}
+}
+ @media screen and (min-width: 1024px){
+  .grid{
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.intro{
+    padding-top: 65px;
+    background-image: url("{% static 'img/library4.jpg' %}");
+    background-position: center;
+    background-size: contain;
+    
+}
+.home{
+  height: 200px; 
+}
+.home p{
+    padding-top: 35px;
+    font-size: 14px;
+}
+
+#loginbtn, #logoutbtn, #registerbtn{
+    font-size: 17px;
+    font-weight: bold;
+    background-color: rgb(47, 118, 248);
+    color: #fff;
+    padding: .25rem 1.0rem;
+    border-radius: 25px;
+    animation: size 5s infinite;
+    border-color: white;
+}
+@keyframes size{
+    0%{
+        padding: .28rem 0.95rem;
+
+    }
+    30%{
+        padding: .22rem 1.05rem;
+
+    }
+}
+#loginbtn:hover, #logoutbtn:hover, #registerbtn:hover{
+    padding: .27rem 1.0rem;
+    background-color: white;
+    color: black;
+
+}
+.login-register, #logoutbtn{
+position: fixed;
+right: 0;
+
+}
+.login-register li{
+display: inline-block;
+justify-content: space-between;
+}
+.highprograms{
+    font-size: 14.5px;
 }
 #name, #phone{
     width: 203px;
@@ -212,7 +302,7 @@ justify-content: space-between;
     color: white;
     font-size: 15px;
     font-weight: bold;
-    background-color: transparent;
+    background-color: rgb(47, 118, 248);
     color: #fff;
     padding: .18rem 0.7rem;
     border-radius: 25px;
@@ -248,6 +338,13 @@ justify-content: space-between;
     font-weight: lighter;
     font-size: 12px;
 }
+.highprograms{
+    font-size: 12px;
+}
+.highhead h3{
+    margin-top: 12%;
+    font-size: 13.5px;
+}
 #name, #phone, #email, #message, #subbtn{
     margin-top: 5px;
     width: 100%;
@@ -268,6 +365,22 @@ justify-content: space-between;
     background-color: rgba(24, 43, 63, 0.932);
     background-position: center;
     margin-top: 40px;
+}
+.highhead{
+    text-align: center;
+    margin-top: 7%;
+
+}
+.highhead h3{
+line-height: 40px;
+border-bottom: 3px solid rgb(8, 89, 240);
+display: inline-block;
+}
+.highprograms{
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    text-align: center;
 }
 .footer{
     background-color: rgba(5, 16, 37, 0.87);
@@ -402,9 +515,12 @@ display: inline-block;
 <p>Uwezo Achievers provides access to high school and undergraduate  <br> education’s scholarships for potential, needy Kenyan graduates <br> who would otherwise have no chance to continue with their studies. <br> <br> “Education is the most powerful weapon that we can <br> use to change the world”, Nelson Mandela. 
 </p>
     </div>
-<div class="subscribe">
+    <div class="highhead">
+        <h3>High School Scholarship Programs</h3>
+    </div>
+    <div class="highprograms">
 
-</div>
+    </div>
 <!--=====Contact Form====-->
 <div class="form">
     <h3>Contact Us</h3>
