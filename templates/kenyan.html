@@ -460,7 +460,6 @@ display: inline-block;
 
     </style>
      <!--===== HEAD =====-->
-     {% if user.is_authenticated %}
      <header class="head">
         <nav class="nav grid">
                 <div class="top-name">                   
@@ -548,93 +547,6 @@ display: inline-block;
 
 </div>
     </footer>
-
-     <!--===== HEAD =====-->
-     {% else %}
-     <header class="head">
-        <nav class="nav grid">
-                <div class="top-name">                   
-                {% if user.is_authenticated %}
-                <h5>{{user.username}} <input type="button" id = 'logo' value="UA"> </h5> 
-                {% else %}    
-                <input type="button" id = 'logo' value="UA">
-             {% endif %}
-                </div>
-
-                <div class="logo"><h3>Uwezo Achievers</h3></div>
-
-            <div class="nav_menu" id = "nav_menu">
-                <ul class="nav__list" id="nav_list">
-                    <li class="nav__item"><a href="/" class="nav__link active">Home</a></li>
-                    <li class="nav__item" id ="about" class="nav__link">About <i class="bx bx-chevron-down"></i>
-                    <ul class="goal">
-                        <li><a href="whatwedo" class="whatwedo">What We do</a></li>
-                        <li><a href="goal" class="goals">Our Goal</a></li>
-                    </ul>
-                    </li>
-                    <li class="nav__item" id="programs" class="nav__link active">Programs <i class="bx bx-chevron-down"></i>
-                    <ul class="side_menu">
-                        <li ><a href="high" id="high">High School</a></li>
-                        <li ><a href="kenyan" id = "kenyan">Kenya Undergrade</a></li>
-                        <li ><a href="abroad" id="abroad" >Abroad Undergrade</a></li>
-                    </ul> </li>
-                    <li class="nav__item"><a href="news" class="nav__link">News</a></li>
-                </ul>
-            </div>
-            <div class="menu_bar" id="menu_bar">
-                <i class='bx bx-menu'></i>
-            </div>
-        </nav>
-    </header>
-    
-    <main class="intro">
-    {% if user.is_authenticated %}
-    <a href="logout" class="logoutbtn"> <input type="button" id = "logoutbtn" value="Logout"> </a>
-    {% else %}
-    <ul class="login-register">
-        <li><a href="login" class="loginbtn"> <input type="button" id="loginbtn" value="Login"> </a></li>
-        <li><a href="register" class="registerbtn"> <input type="button" id="registerbtn" value="Sign Up"> </a>
-        </li>
-    </ul>
-
-    {% endif%}
-    <div class="home">
-<p>Please Login In to continue</p>
-    </div>
-<div class="subscribe">
-
-</div>
- <!--=====Contact Form====-->
-<div class="form">
-    <h3>Contact Us</h3>
-<form action="">
-<input type="text" id = "name" placeholder="Name" required>
-<input type="text" id = "phone" placeholder="Phone No:" required> <br>
-<input type="email" id = "email"placeholder="Email" required> <br>
-<textarea rows="7" id = "message" placeholder="Message" required></textarea> <br>
-<input type="submit" id = "subbtn" value="SUBMIT">
-</form>
-</div>
- <!--===== FOOTER =====-->
- <footer class="footer">
-    <p class="footer__title">Uwezo <br> Achievers</p>
-    <div class="number"><h5>Get In Touch</h5> </div>
-    <div class="address">
-        <p>370 Lancaster Ave, Haverford, PA, USA</p> <br>
-        <p>Dennis Yiaile, Executive Director (ykamakei6345@gmail.com)</p>
-    </div>
-      <div class="footer__social">
-          <a href="https://www.linkedin.com/in/dennis-yiaile-3ab6851a7" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
-          <a href="https://www.facebook.com/denno.kamakx" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-          <a href="https://www.instagram.com/yiaile_kamakei/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
-          <a href="https://twitter.com/YKamakei?s=08" class="footer__icon"><i class='bx bxl-twitter'></i></a>
-      </div>
-<div class="copyright">
-    <p>&#169; 2021 Dennis Yiaile. All Rights Reserved.</p>
-
-</div>
-    </footer>
-{% endif %}
 <script src="{% static 'scripts.js' %}"></script>
 
 </body>
