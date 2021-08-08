@@ -1,0 +1,665 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href=" https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel= "stylesheet">
+    <script src=" https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <title>Uwezo Achievers</title>
+</head>
+<body>
+    <style>
+        .head{
+            background-color: #02092c;
+
+        }
+        .intro{
+            height: 400px;
+            background-image: url("{% static 'img/graduation1.jpg' %}");
+            background-position: center;
+            background-size: contain;
+            
+        }
+        .side_menu{
+            display: none;
+            font-size: 15px;
+            font-weight: lighter;
+            position: absolute;
+            background-color: #02092c;
+
+
+        }
+        
+        .side_menu li:hover{
+            background-color: rgb(4, 69, 95);
+        }
+        #programs:hover .side_menu{
+            display: block;
+        }
+        #programs:hover .side_menu ul{
+            display: block;
+        }
+        .goal{
+            display: none;
+            font-size: 15px;
+            font-weight: lighter;
+            position: absolute;
+            background-color: #02092c;
+
+
+        }
+        .goal li:hover{
+            background-color: rgb(4, 69, 95);
+        }
+        #about:hover .goal{
+            display: block;
+        }
+        #about:hover .goal ul{
+            display: block;
+        }   
+.logo{
+    color: white;
+}
+#logo{
+    border-radius: 0.7rem;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(3, 46, 63);
+    color: white;
+    animation: changecolor 5s infinite;
+}
+@keyframes changecolor {
+  0%{
+background-color: indigo;
+color: white;
+  }
+  30%{
+    color: maroon;
+    background-color: teal;
+  }
+  60%{
+    color: green;
+  }
+  90%{
+   background-color: hsla(hue, saturation, lightness, alpha); 
+  }
+}
+/* ===== MEDIA QUERIES===== */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  body{
+    margin: 0;
+  }
+  .nav_menu ul li a{
+      color: white;
+  }
+.side_menu{
+  font-size: 15px;
+  display: none;
+
+}
+  .nav{
+    height: calc(var(--header-height) + 1rem);
+  }
+  .nav__list{
+    display: flex;
+    padding-top: 0;
+  }
+  .nav__item{
+    margin-left: var(--mb-6);
+    margin-bottom: 0;
+  }
+  .menu_bar{
+    display: none;
+  }
+  .nav__link{
+    color: var(--second-color);
+  }
+  .home{
+  height: 200px; 
+}
+.home h3{
+    padding-top: 60px;
+    font-size: 16px;
+}
+
+#loginbtn, #logoutbtn, #registerbtn{
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    padding: .25rem 1.0rem;
+    border-radius: 25px;
+    animation: size 5s infinite;
+    border-color: white;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+}
+@keyframes size{
+    0%{
+        padding: .28rem 0.95rem;
+
+    }
+    30%{
+        padding: .22rem 1.05rem;
+
+    }
+}
+#loginbtn:hover, #logoutbtn:hover, #registerbtn:hover{
+    padding: .27rem 1.0rem;
+    background-color: white;
+    color: black;
+
+}
+.login-register, #logoutbtn{
+position: fixed;
+right: 0;
+
+}
+.login-register li{
+display: inline-block;
+justify-content: space-between;
+}
+#name, #phone{
+    width: 203px;
+}
+#email, #message, #subbtn{
+    width: 410px;
+}
+.ournews{
+font-size: 13.8px;
+margin-left: 8%;
+margin-right: 8%;
+}
+.newsshead h3{
+    margin-top: 5%;
+}
+.newshead p{
+    font-size: 13.5px;
+}
+}
+ @media screen and (min-width: 1024px) {
+  .grid{
+    margin-left: auto;
+    margin-right: auto;
+  }
+.intro{
+    padding-top: 65px;
+    
+}
+.home{
+  height: 200px; 
+}
+.home h3{
+    padding-top: 60px;
+    font-size: 16px;
+}
+
+#loginbtn, #logoutbtn, #registerbtn{
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    padding: .25rem 1.0rem;
+    border-radius: 25px;
+    animation: size 5s infinite;
+    border-color: white;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+}
+@keyframes size{
+    0%{
+        padding: .28rem 0.95rem;
+
+    }
+    30%{
+        padding: .22rem 1.05rem;
+
+    }
+}
+#loginbtn:hover, #logoutbtn:hover, #registerbtn:hover{
+    padding: .27rem 1.0rem;
+    background-color: white;
+    color: black;
+
+}
+.login-register, #logoutbtn{
+position: fixed;
+right: 0;
+
+}
+.login-register li{
+display: inline-block;
+justify-content: space-between;
+}
+.ournews{
+    font-size: 14.5px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+#name, #phone{
+    width: 203px;
+}
+#email, #message, #subbtn{
+    width: 410px;
+}
+ }
+ .history img{
+    width: 350px;
+    padding-left: 30px;
+    padding-top: 20px;
+
+}
+#history{
+    font-size: 15px;
+    text-align: center;
+
+}
+.mystory p{
+    font-size: 14px;
+}
+.myprof{
+    background-color: rgba(211, 211, 211, 0.13);
+    width: 380px;
+    margin-left: 50px;
+    box-shadow: 0 4px 20px rgba(14,36,49,.15);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+.myprof p{
+    padding-left: 60px;
+ 
+}
+
+.history{
+    columns: 2;
+    display: block;
+    position: relative;
+    margin-left: 30px;
+
+}
+#history h3{
+line-height: 40px;
+border-bottom: 3px solid rgb(8, 89, 240);
+display: inline-block;
+margin-top: 1%;
+text-align: center;
+}
+.history img:hover{
+}
+@media screen and (max-width: 768px){
+.nav_menu{
+    right: -100%;
+    position: fixed;
+    top: var(--header-height);
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--second-color);
+    transition: .5s;
+  }
+  .side_menu{
+        display: none;
+        font-size: 15px;
+        font-weight: lighter;
+        position: relative;
+        background-color: transparent;
+        left: 7%;
+        margin-top:5%;
+
+ }
+ .goals, .whatwedo, #kenyan, #abroad, #high{
+     color: white;
+     font-size: 14px;
+     font-weight: lighter;
+ }
+ .side_menu li:hover{
+    background-color: rgb(4, 69, 95);
+}
+#programs:hover .side_menu{
+            display: block;
+}
+#programs:hover .side_menu ul{
+ display: block;
+}
+.goal{
+        font-size: 15px;
+        font-weight: lighter;
+        background-color: transparent;
+        position: relative;
+        left: 7%;
+        margin-top:7%;
+
+
+ }
+ .goal li:hover{
+    background-color: rgb(4, 69, 95);
+}
+#about:hover .goal{
+            display: block;
+}
+#about:hover .goal ul{
+    display: block;
+}
+#loginbtn, #logoutbtn, #registerbtn{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    padding: .18rem 0.7rem;
+    border-radius: 25px;
+    animation: phsize 5s infinite;
+    border-color: white;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+    
+
+}
+#loginbtn:hover, #logoutbtn:hover, #registerbtn:hover{
+    padding: .20rem 0.8rem;
+    background-color: white;
+    color: black;
+}
+@keyframes phsize {
+    0%{
+        padding: .19rem 0.73rem;
+
+    }
+    30%{
+        padding: .17rem 0.67rem;
+
+    }
+}
+.intro{
+    padding-top: 2px;
+    height: 300px;
+}
+.home{
+    height: 200px;
+}
+.home h3{
+    padding-top: 15%;
+    font-size: 15px;
+}
+.ournews{
+font-size: 12px;
+margin-left: 3%;
+margin-right: 3%;
+}
+
+.newshead h3{
+    margin-top: 11.5%;
+    font-size: 15px;
+
+}
+.newshead p{
+    font-size: 12px;
+}
+.mystory p{
+    font-size: 12px;
+}
+.history{
+    margin-left: 1%;
+    columns: 1;
+    margin-left: 1%;
+
+}
+.myprof{
+    font-size: 12px;
+    margin-left: 1%;
+    width: 280;
+    margin-right: 1%;
+    width: 100%;
+
+}
+.myprof p{
+    font-size: 13px;
+    font-weight: bold;
+}
+.myprof img{
+    padding-left: 1%;
+    width: 100%;
+}
+#name, #phone, #email, #message, #subbtn{
+    margin-top: 5px;
+    width: 95%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+}
+
+}
+
+.menu_bar{
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.home{
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-weight: lighter;
+    background-position: center;
+    margin-top: 40px;
+    background-color: rgba(17, 46, 59, 0.932);
+    font-family: monospace;
+}
+
+.newshead{
+    text-align: center;
+    margin-top: 7%;
+
+}
+.newshead h3{
+line-height: 40px;
+border-bottom: 3px solid rgb(8, 89, 240);
+display: inline-block;
+}
+
+
+.footer{
+    background-color: rgba(5, 16, 37, 0.87);
+    margin-bottom: 0%;
+}
+/*Active menu*/
+.active::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.18rem;
+  left: 0;
+  top: 2rem;
+  background-color: var(--first-color);
+}
+
+/*=== Show menu ===*/
+.show{
+  right: 0;
+}
+.form{
+    text-align: center;
+    height: 430px;
+    margin-top: 7.5%;
+    background-color: rgba(128, 128, 128, 0.596);
+    width: auto;
+
+}
+.form h3{
+    padding-top: 2%;
+    line-height: 40px;
+    border-bottom: 3px solid rgb(8, 89, 240);
+    display: inline-block;
+    text-decoration-style: wavy;
+    
+}
+#name, #phone, #email, #message, #subbtn{
+    border-radius: 0.2rem;
+    border: none;
+    outline: none;
+}
+#name, #phone{
+    height: 40px;
+    font-size: 16px;
+}
+#email{
+    margin-top: 5px;
+    height: 40px;
+    font-size: 16px;
+
+
+}
+#message{
+    margin-top: 5px;
+    font-size: 16px;
+}
+#subbtn{
+    font-size: 18px;
+    background-color: rgb(8, 186, 240);
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+#subbtn:hover{
+    background-color: rgb(47, 118, 248);
+}
+.address{
+    font-size: 14px;
+    font-weight: lighter;
+    margin-bottom: 3%;
+}
+.number h5{
+line-height: 40px;
+border-bottom: 3px solid rgb(66, 125, 235);
+display: inline-block;
+}
+
+.copyright{
+    font-size: 14px;
+    font-weight: lighter;
+    margin-bottom: 0%;
+}
+    </style>
+     <!--===== HEAD =====-->
+     <header class="head">
+        <nav class="nav grid">
+                <div class="top-name">                   
+                {% if user.is_authenticated %}
+                <h5>{{user.username}} <input type="button" id = 'logo' value="UA"> </h5> 
+                {% else %}    
+                <input type="button" id = 'logo' value="UA">
+             {% endif %}
+                </div>
+
+                <div class="logo"><h3>Uwezo Achievers</h3></div>
+
+            <div class="nav_menu" id = "nav_menu">
+                <ul class="nav__list" id="nav_list">
+                    <li class="nav__item"><a href="/" class="nav__link active">Home</a></li>
+                    <li class="nav__item" id ="about" class="nav__link active">About <i class="bx bx-chevron-down"></i>
+                    <ul class="goal">
+                        <li><a href="whatwedo" class="whatwedo">What We do</a></li>
+                        <li><a href="goal" class="goals">Our Goal</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav__item" id="programs" class="nav__link">Programs <i class="bx bx-chevron-down"></i>
+                    <ul class="side_menu">
+                        <li ><a href="high" id="high">High School</a></li>
+                        <li ><a href="kenyan" id = "kenyan">Kenya Undergrade</a></li>
+                        <li ><a href="abroad" id="abroad" >Abroad Undergrade</a></li>
+                    </ul> </li>
+                    <li class="nav__item"><a href="news" class="nav__link">News</a></li>
+                </ul>
+            </div>
+            <div class="menu_bar" id="menu_bar">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="intro">
+    {% if user.is_authenticated %}
+    <a href="logout" class="logoutbtn"> <input type="button" id = "logoutbtn" value="Logout"> </a>
+    {% else %}
+    <ul class="login-register">
+        <li><a href="login" class="loginbtn"> <input type="button" id="loginbtn" value="Login"> </a></li>
+        <li><a href="register" class="registerbtn"> <input type="button" id="registerbtn" value="Sign Up"> </a>
+        </li>
+    </ul>
+
+    {% endif%}
+    <div class="home">
+        <H3>News & Updates</H3>
+    </div>
+    <div class="newshead">
+        <h3>Updates</h3>
+        <p>The following programs are currently accepting applications:</p>
+        {% for new in news reversed%}
+    </div>
+    <div class="ournews">
+        <h4>{{new.title}}, {{new.date}}</h4>
+        <p>{{new.details}}</p> <br>
+        {% endfor %}
+
+        <p>Click on the programs menu item for more information.</p>
+    </div>
+    <div id="history">
+        <h3>History</h3>
+    </div>
+    <div class="history">
+        <div class="mystory">
+            <p>Uwezo Achievers was founded by Dennis Yiaile, the President of this program, in 2021. Dennis is currently a student at Haverford College, USA, Kenya Scholar Access Program (KenSAP) alumnus 2020, and Equity Leadership Program(ELP) alumnus 2019. He hails from a humble background in Ngosuani, a rural village in southern Kenya. Like many children in this locality, he had limited knowledge about the outside world but that didn’t deter his ambition to study at a liberal art institution in North America. <br> <br> To help gifted and needy scholars who are unable to advance their education dreams due to lack of tuition fees, he founded Uwezo Achievers. The program targets Kenya Certificate Of Secondary Education(KCSE) and Kenya Certificate Of Primary Education (KCPE) graduates from low-income backgrounds, particularly those from rural settings in Kenya. The program, voluntarily, exposes them to diverse scholarship programs that can cater to their education expenses depending on their level of studies.</p> <br>
+            <p>“Wherever my pursuit of knowledge takes me, I hope that my story, endeavors, abilities, and experiences will motivate students from low-income backgrounds, precisely those from rural settings in Kenya to follow my path, or to chart their own, with a quality education.”Dennis Yiaile
+            </p>        
+        </div>
+        <div class="myprof">
+                    <img src="{% static 'img/profile.jpg' %}" alt=""> 
+                    <p>Founder & CEO Uwezo Achievers</p>
+                </div>
+               
+            </div>
+<!--=====Contact Form====-->
+<div class="form">
+    <h3>Contact Us</h3>
+<form action="">
+<input type="text" id = "name" placeholder="Name" required>
+<input type="text" id = "phone" placeholder="Phone No:" required> <br>
+<input type="email" id = "email"placeholder="Email" required> <br>
+<textarea rows="7" id = "message" placeholder="Message" required></textarea> <br>
+<input type="submit" id = "subbtn" value="SUBMIT">
+</form>
+</div>
+ <!--===== FOOTER =====-->
+ <footer class="footer">
+    <p class="footer__title">Uwezo <br> Achievers</p>
+    <div class="number"><h5>Get In Touch</h5> </div>
+    <div class="address">
+        <p>370 Lancaster Ave, Haverford, PA, USA</p> <br>
+        <p>Dennis Yiaile, Executive Director (ykamakei6345@gmail.com)</p>
+    </div>
+      <div class="footer__social">
+          <a href="https://www.linkedin.com/in/dennis-yiaile-3ab6851a7" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+          <a href="https://www.facebook.com/denno.kamakx" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+          <a href="https://www.instagram.com/yiaile_kamakei/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+          <a href="https://twitter.com/YKamakei?s=08" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+      </div>
+<div class="copyright">
+    <p>&#169; 2021 Dennis Yiaile. All Rights Reserved.</p>
+
+</div>
+    </footer>
+<script src="{% static 'scripts.js' %}"></script>
+
+</body>
+</html>

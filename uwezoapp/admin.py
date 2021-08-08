@@ -1,5 +1,5 @@
-from uwezoachievers.uwezoapp.models import News
+from .models import New
 from django.contrib import admin
 
 # Register your models here.
-admin.site.register(user)
+admin.site.register(New)

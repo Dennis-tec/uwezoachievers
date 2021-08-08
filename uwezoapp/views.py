@@ -4,6 +4,8 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 
+from .models import New
+
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -51,6 +53,9 @@ def logout(request):
     return redirect('/')
 def whatwedo(request):
     return render(request, 'whatwedo.html')
+def news(request):
+    news = New.objects.all()
+    return render(request, "news.html", {'news':news})
 def goal(request):
     return render(request, 'goal.html')
 def high(request):
@@ -59,5 +64,3 @@ def kenyan(request):
     return render(request, 'kenyan.html')
 def abroad(request):
     return render(request, 'abroad.html')
-def news(request):
-    return render(request, "news.html")
