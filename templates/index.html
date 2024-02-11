@@ -10,6 +10,7 @@
     <script src=" https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Uwezo Achievers</title>
+
 </head>
 <body>
     <style>
@@ -96,6 +97,11 @@ color: white;
   90%{
    background-color: hsla(hue, saturation, lightness, alpha); 
   }
+}
+#totalStudents {
+    font-weight: Bold;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
 }
 /* ===== MEDIA QUERIES===== */
 @media screen and (max-width: 1024px) and (min-width: 768px){
@@ -639,6 +645,7 @@ display: inline-block;
     {% endif%}
     <div class="home">
 <p>“Education is the most powerful weapon that we <br> can use to change the world”, Nelson Mandela. <br> <br> Sign up with your email address to receive news and updates.</p>
+            <p>Number of Students Enrolled <br> <span id="totalStudents">47</span> <br></p>
     </div>
 
     <div class="eventshead">
